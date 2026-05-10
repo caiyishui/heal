@@ -1,0 +1,3 @@
+[submodule "newSceneSDK"]
+	path = newSceneSDK
+	url = http://gitlab.csjbot.com/ppdayz/newSceneSDK.git

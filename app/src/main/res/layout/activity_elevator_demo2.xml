@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".future.ElevatorDemo2Activity">
+
+
+    <Button
+        android:id="@+id/bt_use"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="申请电梯使用权"
+        />
+
+
+
+    <Button
+        android:id="@+id/bt_call21"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="去6楼"
+        android:layout_toRightOf="@+id/bt_use"
+        />
+
+    <Button
+        android:id="@+id/bt_call1"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="去1楼"
+        android:layout_toRightOf="@+id/bt_call21"
+        />
+
+    <Button
+        android:id="@+id/bt_open"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="打开电梯"
+        android:layout_below="@+id/bt_call21"
+        />
+    <Button
+        android:id="@+id/bt_close"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="（电梯）关门"
+        android:layout_toRightOf="@+id/bt_open"
+        android:layout_below="@id/bt_call21"
+        />
+
+
+    <Button
+        android:id="@+id/bt_shifang"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="释放使用权"
+        android:layout_toRightOf="@+id/bt_close"
+        android:layout_below="@id/bt_call1"
+        />
+
+
+    <Button
+        android:id="@+id/bt_config"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="配置电梯"
+        android:layout_below="@id/bt_open"
+        />
+
+    <Button
+        android:id="@+id/bt_ooppen"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="打开电梯模块"
+        android:layout_below="@id/bt_close"
+        android:layout_toRightOf="@+id/bt_config"
+        />
+</RelativeLayout>

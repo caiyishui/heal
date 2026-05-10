@@ -1,0 +1,71 @@
+# IDEA
+*.iml
+/.idea
+
+
+# Built application files
+*.apk
+*.ap_
+
+# OSX
+.DS_Store
+
+# Gradle files
+/build
+.gradle
+
+/captures
+
+# Local configuration file (sdk path, etc)
+/local.properties
+gradle
+
+# Files for the Dalvik VM
+*.dex
+
+
+# uartkit
+.uartkit
+
+
+
+# Java class files
+*.class
+
+
+# Log Files
+*.log
+
+#freeline
+/projectFilesBackup
+/freeline
+/freeline_core
+freeline.py
+freeline_project_description.json
+
+app/version.properties
+/app/version.properties
+/uartagent/build/
+GUIDE_NAME.xml
+bank/build/generated/
+bank/build/intermediates/bundles/
+bank/build/intermediates/incremental/
+bank/build/intermediates/lint/
+bank/build/intermediates/manifest/
+bank/build/intermediates/rs/
+bank/build/intermediates/shaders/
+cosmodel/build/generated/
+cosmodel/build/intermediates/bundles/
+cosmodel/build/intermediates/incremental/
+cosmodel/build/intermediates/lint/
+cosmodel/build/intermediates/manifest/
+cosmodel/build/intermediates/rs/
+cosmodel/build/intermediates/shaders/
+NAVI_NAME.xml
+/app/src/main/res/raw/jiudian.mp4
+nettytest
+/outputs/output.json
+/outputs
+/blackgaga-out
+/java_pid8796.hprof
+/faceagent/src/main/java/com/demo/csjbot/faceagent/greendao/gen

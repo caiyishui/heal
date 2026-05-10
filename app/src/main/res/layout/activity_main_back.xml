@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.demo.csjbot.csjsdkdemo.MainActivity">
+
+    <Button
+        android:id="@+id/bt_alice_arm_right_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alice右臂抬起"
+        />
+
+    <Button
+        android:id="@+id/bt_alice_arm_right_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alice右臂放下"
+        />
+
+    <Button
+        android:id="@+id/bt_happy_expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开心表情"
+        />
+
+    <Button
+        android:id="@+id/bt_save_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存机器人当前地图(一般使用思岚软件扫完或编辑完地图之后保存一次即可)"
+        />
+    <Button
+        android:id="@+id/bt_save_point1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存当前位置信息(位置1)"
+        />
+
+    <Button
+        android:id="@+id/bt_save_point2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存当前位置信息(位置2)"
+        />
+
+    <Button
+        android:id="@+id/bt_navi_point1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导航到位置1"
+        />
+
+    <Button
+        android:id="@+id/bt_navi_point2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导航到位置2"
+        />
+
+
+</LinearLayout>

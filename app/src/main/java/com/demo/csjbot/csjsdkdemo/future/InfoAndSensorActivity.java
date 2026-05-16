@@ -40,6 +40,7 @@ public class InfoAndSensorActivity extends BaseActivity {
         mCsjBot.getState().getMotoOverloadState(onMotoOverloadListener);
         mCsjBot.getState().checkSelf(onWarningCheckSelfListener);
         mCsjBot.getVersion().getVersion(onVersionListener);
+        mCsjBot.getState().releaseEmergency();
     }
 
     @Override

@@ -1,21 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileOptions.encoding = "UTF-8"
-
-    compileSdkVersion 28
-    buildToolsVersion '28.0.2'
+    compileSdkVersion 29
+    namespace "com.demo.csjbot.csjsdkdemo"
 
     defaultConfig {
         applicationId "com.demo.csjbot.csjsdkdemo"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         ndk {
-            // 设置支持的SO库架构
             abiFilters  'armeabi-v7a'
         }
     }
@@ -28,7 +25,6 @@ android {
     }
     sourceSets {
         main {
-            // 将 jniLib 指向 libs
             jniLibs.srcDir 'libs'
         }
     }
@@ -41,30 +37,23 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-}
 
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support') {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion '25.3.1'
-            }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/INDEX.LIST', 'META-INF/io.netty.versions.properties']
         }
     }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile 'com.android.support:multidex:1.0.3'
-//    implementation(name: 'coshandler-debug', ext: 'aar')
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation project(path: ':newSceneSDK')
-    implementation 'io.netty:netty-all:4.1.23.Final'
-    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'io.netty:netty-all:4.1.75.Final'
+    implementation 'com.google.code.gson:gson:2.8.9'
 }

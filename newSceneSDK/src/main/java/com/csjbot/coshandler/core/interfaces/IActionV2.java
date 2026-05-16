@@ -1,7 +1,7 @@
 package com.csjbot.coshandler.core.interfaces;
 
 
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 
 public interface IActionV2 {
     /**

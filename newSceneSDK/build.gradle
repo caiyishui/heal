@@ -1,18 +1,20 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    namespace "com.csjbot.coshandler"
+
+    buildFeatures {
+        buildConfig true
+    }
 
     defaultConfig {
-//        applicationId "com.csjbot.coshandler"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            // 设置支持的SO库架构
             abiFilters  'armeabi-v7a'
         }
 
@@ -53,21 +55,19 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation files('libs\\bakersynthesizer.jar')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
+    implementation files('libs/bakersynthesizer.jar')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.4.0', {
+        exclude group: 'androidx.test', module: 'support-annotations'
     })
-    //noinspection GradleCompatible
-    compile 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testCompile 'junit:junit:4.12'
-//    compile files('libs/Msc.jar')
-    compile files('libs/logback-android-1-csjbot.jar')
-    compile files('libs/slf4j-api-1.7.21.jar')
-    compile 'com.android.support:recyclerview-v7:28.0.0'
-    //    compile files('libs/voiceclient.jar')
-    compile files('libs/cosclient.jar')
-    compile files('libs/cameraclient.jar')
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation files('libs/logback-android-1-cchunk.jar')
+    implementation files('libs/slf4j-api-1.7.21.jar')
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    api files('libs/cosclient.jar')
+    api files('libs/cameraclient.jar')
 
     implementation "com.google.code.gson:gson:2.8.1"
 
@@ -76,8 +76,4 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
     implementation "com.squareup.retrofit2:converter-gson:2.3.0"
     implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
-
-    //    compile project(path: ':voiceclient')
-    //    compile project(path: ':cosclient')
-    //    compile project(path: ':cameraclient')
 }

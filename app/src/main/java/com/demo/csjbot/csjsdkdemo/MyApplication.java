@@ -1,8 +1,8 @@
 package com.demo.csjbot.csjsdkdemo;
 
 import android.content.Context;
-import android.support.multidex.MultiDex;
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 import android.util.Log;
 
 import com.csjbot.coshandler.core.CsjRobot;
@@ -17,8 +17,9 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        CsjRobot.authentication(this, "Your API Key", "Your User Key", new OnAuthenticationListener() {
+        Log.d("TAG", "Authorization start!");
+//        CsjRobot.authentication(this, "e19811c5-ad7f-4544-bca1-9f4c75e2539c", "39DF1D9393DA62389DDD34E0F49BF29A", new OnAuthenticationListener() {
+        CsjRobot.authentication(this, "39DF1D9393DA62389DDD34E0F49BF29A", "e19811c5-ad7f-4544-bca1-9f4c75e2539c", new OnAuthenticationListener() {
             @Override
             public void success() {
                 Log.d("TAG", "Authorization succeeded!");

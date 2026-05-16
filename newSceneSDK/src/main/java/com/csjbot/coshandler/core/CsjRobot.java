@@ -481,9 +481,9 @@ public class CsjRobot {
 
     private void headerLog() {
         CsjlogProxy.getInstance().warn("============== app start ======================");
-        CsjlogProxy.getInstance().warn("============== app version      :" + BuildConfig.VERSION_NAME + " ");
+        CsjlogProxy.getInstance().warn("============== app version      :"  + " ");
         CsjlogProxy.getInstance().warn("============== app SN           :" + ConfInfoUtil.getSN() + " ");
-        CsjlogProxy.getInstance().warn("============== app BUILD_TYPE   :" + BuildConfig.BUILD_TYPE + ", App version code :" + BuildConfig.VERSION_CODE + " ");
+        CsjlogProxy.getInstance().warn("============== app BUILD_TYPE   :" + BuildConfig.BUILD_TYPE + ", App version code :"  + " ");
     }
 
     /**

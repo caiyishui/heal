@@ -7,9 +7,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.widget.TextView;
 
 import com.csjbot.coshandler.core.CsjRobot;
@@ -32,7 +34,7 @@ public class SplashActivity extends BaseActivity {
             }
         }
 
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+//        startActivity(new Intent(SplashActivity.this, MainActivity.class));
         if (CsjRobot.getInstance().getState().isConnect()) {
             startActivity(new Intent(SplashActivity.this, MainActivity.class));
         } else {
@@ -44,17 +46,17 @@ public class SplashActivity extends BaseActivity {
 
                 @Override
                 public void faild() {
-
+                    Log.d("TAG", "registerConnectListener faild!");
                 }
 
                 @Override
                 public void timeout() {
-
+                    Log.d("TAG", "registerConnectListener timeout!");
                 }
 
                 @Override
                 public void disconnect() {
-
+                    Log.d("TAG", "registerConnectListener disconnect!");
                 }
             });
         }
